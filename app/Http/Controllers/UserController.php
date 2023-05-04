@@ -22,7 +22,7 @@ class UserController extends Controller
         [
             'label' => 'Total',
             'column' => 'total',
-            'render' => fn ($value) => ("Rp. " . number_format($value, 3))
+            // 'render' => fn ($value) => ("Rp. " . number_format($value, 3))
         ],
     ];
 
@@ -31,7 +31,7 @@ class UserController extends Controller
             'color' => 'primary',
             'icon' => 'fas fa-glass',
             'text' => null,
-            'href' => url('user/:id/block'),
+            // 'href' => url('user/:id/block'),
             'show_if' => ':balance > 100'
         ]
     ];
@@ -43,7 +43,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        // return view('laracrud.index')
+        return view('thundercrud.crud.index');
     }
 
     /**
